@@ -1,1 +1,12 @@
 /* CODE STARTS FROM HERE */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.Root-Container{
+    border: 1px solid red;
+    height: 100vh;
+    width: 100vw;
+}
