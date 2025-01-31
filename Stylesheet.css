@@ -76,11 +76,11 @@ background: linear-gradient(to right, rgb(68 119 244), rgb(119 63 235)); Blue to
     border-radius: 15px;
 }
 
-#Root-Box1-BoxABC {
-    /* border: 1px solid red; */
-    /* height: 50px; */
-    /* width: 100%; */
-}
+/* #Root-Box1-BoxABC {
+    border: 1px solid red;
+    height: 50px;
+    width: 100%;
+} */
 
 /* BOX-A */
 
@@ -132,7 +132,100 @@ background: linear-gradient(to right, rgb(68 119 244), rgb(119 63 235)); Blue to
     font-family: Arial, Helvetica, sans-serif;
 }
 
+
+
+
+
+
+
+
+
+/* ---------------------------------------------------------------- ROOT-BOX-2 */
+
 .Root-Box2 {
+    border: 2px dashed rgb(133, 133, 133);
     height: 330px;
-    border: 1px solid white;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.345), rgba(30, 30, 30, 0.116));
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* BOX-A */
+
+.Root-Box2-BoxA {
+    /* border: 1px solid red; */
+    height: 90px;
+    width: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Root-Box2-BoxA img {
+    /* border: 1px solid white; */
+    height: 75px;
+}
+
+/* BOX-B */
+
+.Root-Box2-BoxB {
+    /* border: 1px solid green; */
+    height: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Files-Name {
+    /* border: 1px solid red; */
+    color: #c0c0c0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+/* BOX-C */
+
+.Root-Box2-BoxC {
+    /* border: 1px solid blue; */
+    height: 70px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Download-File-Button {
+    /* border: 1px solid white; */
+    width: 200px;
+    height: 50px;
+    border-radius: 12px;
+    background: linear-gradient(to right, rgb(86, 119, 204), rgba(120, 63, 235, 0.671));
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    gap: 3px;
+}
+
+.Download-File-Button:hover {
+    cursor: pointer;
+    background: linear-gradient(to right, rgb(68, 95, 164), rgba(102, 54, 198, 0.671));
+}
+
+.Choose-Btn-Logo {
+    /* border: 1px solid red; */
+    height: 40px;
+}
+
+.Choose-File {
+    /* border: 1px solid yellow; */
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
 }
