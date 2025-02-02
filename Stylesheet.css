@@ -205,7 +205,7 @@ background: linear-gradient(to right, rgb(68 119 244), rgb(119 63 235)); Blue to
     width: 200px;
     height: 50px;
     border-radius: 12px;
-    background: linear-gradient(to right, rgb(86, 119, 204), rgba(120, 63, 235, 0.671));
+    background: linear-gradient(90deg, rgb(86, 119, 204), rgba(120, 63, 235, 0.671));
     display: flex;
     justify-content: center;
     flex-direction: row;
@@ -229,3 +229,11 @@ background: linear-gradient(to right, rgb(68 119 244), rgb(119 63 235)); Blue to
     font-family: Arial, Helvetica, sans-serif;
     font-size: 17px;
 }
+
+/* Download Button */
+
+/* #Download_Btn {
+    display: none;
+    background: linear-gradient(90deg, rgb(215, 59, 95), rgba(201, 63, 235, 0.67));
+    font-weight: bold;
+} */
