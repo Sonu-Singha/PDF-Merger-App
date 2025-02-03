@@ -27,6 +27,8 @@ let Download_Button = document.body.querySelector(".Download-File-Button");
 
 // ----------------------------------------------------------------------Adding EventListerner to PDF Input
 
+let Selected_Files = [];
+
 PDF_Input.addEventListener("change", function (event) {
     let files = event.target.files;
 
@@ -43,6 +45,7 @@ PDF_Input.addEventListener("change", function (event) {
     }
 
     else {
+        Selected_Files = [];
         Files_Name.style.fontWeight = "normal"
         Files_Name.textContent = "Drop your PDF files here"
         Choose_File.textContent = "Choose File"
@@ -63,8 +66,12 @@ PDF_Input.addEventListener("change", function (event) {
 
 async function PDF_Merger(files) {
     let { PDFDocument } = PDFLib;
-
     let Merged_PDF = await PDFDocument.create();
+
+
+    files.sort(function (a, b) {
+        return a.lastModified - b.lastModified;
+    })
 
     for (let i = 0; i < files.length; i++) {
         let file = files[i];
@@ -121,7 +128,7 @@ async function PDF_Handler() {
     a.remove();
     console.log(a)
 
-    // URL.revokeObjectURL(FileURL)
+    URL.revokeObjectURL(FileURL)
 
 }
 
@@ -137,9 +144,15 @@ async function PDF_Handler() {
 
 // ---------------------------------------------------------------------- Triggering DOWNLOAD Button
 
-Download_Button.addEventListener("click", function () {
+Download_Button.addEventListener("click", function (event) {
     if (Choose_File.textContent === "Merge PDFs") {
         PDF_Handler();
         event.preventDefault();
+        Files_Name.style.fontWeight = "normal"
+        Files_Name.textContent = "Drop your PDF files here"
+        Choose_File.textContent = "Choose File"
+        Download_Button.style.background = "linear-gradient(90deg, rgb(86, 119, 204), rgba(120, 63, 235, 0.671))"
+
+        Selected_Files = [];
     }
 });
